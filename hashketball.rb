@@ -215,3 +215,10 @@ def player_with_the_longest_name
   #binding.pry
   return profile[:player_name]
 end
+
+def most_points_scored
+  playerData=get_all_player_data(game_hash)
+  profile=playerData.max{|profile1, profile2| profile1[:points] <=> profile2[:points]}
+  #binding.pry
+  return profile[:player_name]
+end
