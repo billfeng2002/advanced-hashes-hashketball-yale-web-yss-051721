@@ -153,3 +153,12 @@ def team_colors(teamName)
   teamProfile=game_hash.find{|key,teamInfo|teamInfo[:team_name]==teamName}
   return teamProfile[1][:colors]
 end
+
+def team_names
+  teamNames=[]
+  game_hash.each{
+    |teamData|
+    teamNames << teamData[:team_name]
+  }
+  teamNames
+end
