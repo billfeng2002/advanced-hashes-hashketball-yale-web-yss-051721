@@ -198,7 +198,13 @@ end
 
 def winning_team
   winning=""
-  game_hash.each
+  score=0
+  pointTrack=game_hash.map{
+    |location, teamData|
+    points=sum_points_of_teamData(teamData)
+    [teamData[:team_name],points]
+  }
   
-  
+  maxPair=pointTrack.max{|t1,t2| t1[1] <=> t2[1]}
+  maxPair[0]
 end
