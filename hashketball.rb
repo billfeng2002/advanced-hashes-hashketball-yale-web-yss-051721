@@ -193,7 +193,7 @@ end
 
 def sum_points_of_teamData(teamData)
   players=teamData[:players]
-  players.reduce{|sum,playerProfile| sum+playerProfile[:points]}
+  players.reduce(0){|sum,playerProfile| sum+playerProfile[:points]}
 end
 
 def winning_team
