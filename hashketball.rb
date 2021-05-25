@@ -204,7 +204,7 @@ def winning_team
     points=sum_points_of_teamData(teamData)
     [teamData[:team_name],points]
   }
-  
+  p pointTrack
   maxPair=pointTrack.max{|t1,t2| t1[1] <=> t2[1]}
   maxPair[0]
 end
