@@ -208,3 +208,10 @@ def winning_team
   maxPair=pointTrack.max{|t1,t2| t1[1] <=> t2[1]}
   maxPair[0]
 end
+
+def player_with_the_longest_name
+  playerData=get_all_player_data(game_hash)
+  profile=playerData.max{|profile1, profile2| profile1[:player_name].length <=> profile2[:player_name].length}
+  #binding.pry
+  return profile[:player_name]
+end
