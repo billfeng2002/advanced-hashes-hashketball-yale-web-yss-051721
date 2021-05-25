@@ -146,6 +146,6 @@ end
 def shoe_size(player_name)
   playerData=get_all_player_data(game_hash)
   profile=playerData.find{|profile| profile[:player_name]==player_name}
-  return profile[:shoe_size]
+  return profile[:shoe]
 end
 
