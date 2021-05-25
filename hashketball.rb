@@ -134,6 +134,7 @@ def get_all_player_data(game)
     |location, teamData|
     playerData=playerData+teamData[:players]
   }
+  playerData
 end
   
 def num_points_scored(player_name)
