@@ -149,4 +149,3 @@ def shoe_size(player_name)
   return profile[:shoe_size]
 end
 
-def 
