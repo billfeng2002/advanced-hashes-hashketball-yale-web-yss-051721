@@ -190,3 +190,10 @@ def most_points_scored
   #binding.pry
   return profile[:player_name]
 end
+
+def winning_team
+  winning=""
+  game_hash.each
+  
+  
+end
