@@ -171,3 +171,8 @@ def player_numbers(team_name)
     }
     playerNums
 end
+
+def player_stats(player_name){
+  playerData=get_all_player_data(game_hash)
+  playerData.find{|profile| profile[:player_name]==player_name}
+}
