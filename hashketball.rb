@@ -216,9 +216,14 @@ def player_with_the_longest_name
   return profile[:player_name]
 end
 
-def most_points_scored
+def most_steals
   playerData=get_all_player_data(game_hash)
-  profile=playerData.max{|profile1, profile2| profile1[:points] <=> profile2[:points]}
+  profile=playerData.max{|profile1, profile2| profile1[:steals] <=> profile2[:steals]}
   #binding.pry
   return profile[:player_name]
+end
+
+def long_name_steals_a_ton?
+  return (player_with_the_longest_name==most_steals)
+  
 end
