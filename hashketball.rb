@@ -179,6 +179,6 @@ end
 
 def big_shoe_rebounds
   playerData=get_all_player_data(game_hash)
-  profile=playerData.max{|profile| profile[:shoe]}
+  profile=playerData.max{|profile| binding.pry; profile[:shoe]}
   return profile[:rebounds]
 end
