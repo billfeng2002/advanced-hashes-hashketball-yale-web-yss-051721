@@ -157,7 +157,7 @@ end
 def team_names
   teamNames=[]
   game_hash.each{
-    |teamData|
+    |location,teamData|
     teamNames << teamData[:team_name]
   }
   teamNames
