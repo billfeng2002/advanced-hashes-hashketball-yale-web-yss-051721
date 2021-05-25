@@ -164,7 +164,7 @@ def team_names
 end
 
 def player_numbers(team_name)
-    teamProfile=game_hash.find{|key,teamInfo|teamInfo[:team_name]==teamName}
+    teamProfile=game_hash.find{|key,teamInfo|teamInfo[:team_name]==team_name}
     playerNums=teamProfile[1][:players].collect{
       |playerProfile|
       playerProfile[:number]
