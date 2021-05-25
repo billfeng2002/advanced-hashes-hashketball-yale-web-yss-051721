@@ -151,5 +151,5 @@ end
 
 def team_colors(teamName)
   teamProfile=game_hash.find{|key,teamInfo|teamInfo[:team_name]==teamName}
-  return teamProfile[:colors]
+  return teamProfile[1][:colors]
 end
