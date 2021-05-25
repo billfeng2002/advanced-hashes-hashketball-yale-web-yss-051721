@@ -125,5 +125,21 @@ def game_hash
     }
   }
 end
-
 # Write code here
+
+require 'pry'
+def get_all_player_data(game)
+  playerData=[]
+  game.each{
+    |location, teamData|
+    playerData=playerData+teamData[:players]
+  }
+end
+  
+def num_points_scored(player_name)
+  playerData=get_all_player_data(game_hash)
+    binding.pry
+
+  profile=playerData.find{|profile| profile[:player_name]==player_name}
+  return profile[:points]
+end
