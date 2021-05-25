@@ -142,3 +142,5 @@ def num_points_scored(player_name)
   profile=playerData.find{|profile| profile[:player_name]==player_name}
   return profile[:points]
 end
+
+def 
