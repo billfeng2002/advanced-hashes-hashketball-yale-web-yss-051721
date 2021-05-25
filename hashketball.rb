@@ -139,8 +139,6 @@ end
   
 def num_points_scored(player_name)
   playerData=get_all_player_data(game_hash)
-    binding.pry
-
   profile=playerData.find{|profile| profile[:player_name]==player_name}
   return profile[:points]
 end
