@@ -191,6 +191,11 @@ def most_points_scored
   return profile[:player_name]
 end
 
+def sum_points_of_teamData(teamData)
+  players=teamData[:players]
+  players.reduce{|sum,playerProfile|,sum+playerProfile[:points]}
+end
+
 def winning_team
   winning=""
   game_hash.each
